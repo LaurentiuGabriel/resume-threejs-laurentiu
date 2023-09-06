@@ -5,6 +5,7 @@ import { Canvas } from "@react-three/fiber";
 import Scene from "./Body";
 // import Sky from "./Setup/Sky";
 import Lights from "./Setup/Lights";
+import Particles from "react-particles-js";
 import { Loader, Preload, Stars } from "@react-three/drei";
 //
 //
@@ -12,7 +13,7 @@ const App = () => {
   return (
     <div id="cover">
       <div id="selector">
-        <div id="greeting">
+        <div id="welcome">
           <Bounce top>
             <h1
               style={{
