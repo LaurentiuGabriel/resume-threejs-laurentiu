@@ -1,14 +1,22 @@
 import "./App.css";
-import React, { Suspense } from "react";
+import React, { Suspense }, { useEffect } from "react";
 import Bounce from "react-reveal/Bounce";
 import { Canvas } from "@react-three/fiber";
 import Scene from "./Body";
-// import Sky from "./Setup/Sky";
 import Lights from "./Setup/Lights";
 import Particles from "react-particles-js";
 import { Loader, Preload, Stars } from "@react-three/drei";
-//
-//
+
+
+useEffect(() => {
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const mobileRedirectUrl = "https://laurentiugabriel.github.io";
+
+    if (isMobile) {
+      window.location.href = mobileRedirectUrl;
+    }
+  }, []);
+
 const App = () => {
   return (
     <div id="cover">
